@@ -97,6 +97,20 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
+  BanAD:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/BanAD.list
+    path: ./ruleset/BanAD.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  BanProgramAD:
+    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/BanProgramAD.list
+    path: ./ruleset/BanProgramAD.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
 
 proxy-groups:
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png
@@ -182,9 +196,17 @@ proxy-groups:
       - 美国-自动
     name: 全球
     type: select
+  - icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png
+    name: 广告拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
 
 rules:
   - "RULE-SET,private,DIRECT"
+  - "RULE-SET,BanAD,广告拦截"
+  - "RULE-SET,BanProgramAD,广告拦截"
   - "RULE-SET,bing,AIGC"
   - "RULE-SET,copilot,AIGC"
   - "RULE-SET,bard,AIGC"
