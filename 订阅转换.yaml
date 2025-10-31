@@ -204,6 +204,7 @@ proxy-groups:
       - DIRECT
 
 rules:
+  - "DOMAIN-SUFFIX,uinotes.com,DIRECT"
   - "RULE-SET,private,DIRECT"
   - "RULE-SET,BanAD,广告拦截"
   - "RULE-SET,BanProgramAD,广告拦截"
