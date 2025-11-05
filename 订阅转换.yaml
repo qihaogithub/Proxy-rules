@@ -205,6 +205,7 @@ proxy-groups:
 
 rules:
   - "DOMAIN-SUFFIX,uinotes.com,DIRECT"
+  - "DOMAIN-SUFFIX,aistudio.google.com,AIGC"
   - "RULE-SET,private,DIRECT"
   - "RULE-SET,BanAD,广告拦截"
   - "RULE-SET,BanProgramAD,广告拦截"
