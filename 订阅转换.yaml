@@ -208,6 +208,8 @@ rules:
   - "DOMAIN-SUFFIX,aistudio.google.com,AIGC"
   - "DOMAIN-SUFFIX,gstatic.com,AIGC"
   - "DOMAIN-SUFFIX,googleapis.com,AIGC"
+  - "DOMAIN-SUFFIX,adobe.io,REJECT"
+  - "DOMAIN-SUFFIX,adobestats.io,REJECT"
   - "RULE-SET,private,DIRECT"
   - "RULE-SET,BanAD,广告拦截"
   - "RULE-SET,BanProgramAD,广告拦截"
