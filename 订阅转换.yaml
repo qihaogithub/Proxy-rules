@@ -115,14 +115,17 @@ rule-providers:
     path: ./ruleset/DIRECT.yaml
     behavior: domain
     format: yaml
+    type: file
   REJECT:
     path: ./ruleset/REJECT.yaml
     behavior: domain
     format: yaml
+    type: file
   gemini_ip:
     path: ./ruleset/gemini.yaml
     behavior: domain
     format: yaml
+    type: file
 
 proxy-groups:
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png
