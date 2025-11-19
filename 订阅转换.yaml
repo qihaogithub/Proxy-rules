@@ -112,20 +112,26 @@ rule-providers:
     format: text
     type: http
   DIRECT:
+    url: https://raw.githubusercontent.com/qihaogithub/Proxy-rules/refs/heads/main/ruleset/DIRECT.yaml
     path: ./ruleset/DIRECT.yaml
-    behavior: domain
+    behavior: classical
+    interval: 86400
     format: yaml
-    type: file
+    type: http
   REJECT:
+    url: https://raw.githubusercontent.com/qihaogithub/Proxy-rules/refs/heads/main/ruleset/REJECT.yaml
     path: ./ruleset/REJECT.yaml
-    behavior: domain
+    behavior: classical
+    interval: 86400
     format: yaml
-    type: file
+    type: http
   gemini_ip:
+    url: https://raw.githubusercontent.com/qihaogithub/Proxy-rules/refs/heads/main/ruleset/gemini.yaml
     path: ./ruleset/gemini.yaml
-    behavior: domain
+    behavior: classical
+    interval: 86400
     format: yaml
-    type: file
+    type: http
 
 proxy-groups:
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png
