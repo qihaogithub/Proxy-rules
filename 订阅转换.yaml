@@ -111,6 +111,18 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  DIRECT:
+    path: ./ruleset/DIRECT.yaml
+    behavior: domain
+    format: yaml
+  REJECT:
+    path: ./ruleset/REJECT.yaml
+    behavior: domain
+    format: yaml
+  gemini_ip:
+    path: ./ruleset/gemini.yaml
+    behavior: domain
+    format: yaml
 
 proxy-groups:
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png
@@ -204,15 +216,11 @@ proxy-groups:
       - DIRECT
 
 rules:
-  - "DOMAIN-SUFFIX,uinotes.com,DIRECT"
-  - "DOMAIN-SUFFIX,aistudio.google.com,AIGC"
-  - "DOMAIN-SUFFIX,gstatic.com,AIGC"
-  - "DOMAIN-SUFFIX,googleapis.com,AIGC"
-  - "DOMAIN-SUFFIX,adobe.io,REJECT"
-  - "DOMAIN-SUFFIX,adobestats.io,REJECT"
+  - "RULE-SET,DIRECT,DIRECT"
   - "RULE-SET,private,DIRECT"
   - "RULE-SET,BanAD,广告拦截"
   - "RULE-SET,BanProgramAD,广告拦截"
+  - "RULE-SET,REJECT,广告拦截"
   - "RULE-SET,bing,AIGC"
   - "RULE-SET,copilot,AIGC"
   - "RULE-SET,bard,AIGC"
@@ -223,6 +231,7 @@ rules:
   - "RULE-SET,telegram_ip,Telegram"
   - "RULE-SET,google_domain,Google"
   - "RULE-SET,google_ip,Google"
+  - "RULE-SET,gemini_ip,AIGC"
   - "RULE-SET,geolocation-!cn,代理"
   - "RULE-SET,cn_domain,DIRECT"
   - "RULE-SET,cn_ip,DIRECT"
