@@ -14,3 +14,4 @@ payload:
   - DOMAIN-KEYWORD,generativelanguage
   - DOMAIN,play.google.com
   - DOMAIN-SUFFIX,clients6.google.com
+  - DOMAIN,www.gstatic.com
