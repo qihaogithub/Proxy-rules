@@ -133,7 +133,7 @@ rule-providers:
     format: yaml
     type: http
   figma:
-    url: https://raw.githubusercontent.com/qihaogithub/Proxy-rules/refs/heads/main/ruleset/Figma.yaml
+    url: https://raw.githubusercontent.com/qihaogithub/Proxy-rules/refs/heads/main/ruleset/figma.yaml
     path: ./ruleset/figma.yaml
     behavior: classical
     interval: 86400
