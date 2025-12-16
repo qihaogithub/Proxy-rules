@@ -132,6 +132,13 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
+  figma:
+    url: https://raw.githubusercontent.com/qihaogithub/Proxy-rules/refs/heads/main/ruleset/Figma.yaml
+    path: ./ruleset/figma.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
 
 proxy-groups:
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png
@@ -168,6 +175,14 @@ proxy-groups:
       - 美国-自动
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Google.png
     name: Google
+    type: select
+    proxies:
+      - 香港-自动
+      - 新加坡-自动
+      - 日本-自动
+      - 美国-自动
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Figma.png
+    name: Figma
     type: select
     proxies:
       - 香港-自动
@@ -211,6 +226,7 @@ proxy-groups:
       - AIGC
       - Telegram
       - Google
+      - Figma
       - 香港-自动
       - 新加坡-自动
       - 日本-自动
@@ -235,6 +251,7 @@ rules:
   - "RULE-SET,bard,AIGC"
   - "RULE-SET,openai,AIGC"
   - "RULE-SET,claude,AIGC"
+  - "RULE-SET,figma,Figma"
   - "RULE-SET,steam,代理"
   - "RULE-SET,telegram_domain,Telegram"
   - "RULE-SET,telegram_ip,Telegram"
