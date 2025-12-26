@@ -185,6 +185,7 @@ proxy-groups:
     name: Figma
     type: select
     proxies:
+      - DIRECT
       - 香港-自动
       - 新加坡-自动
       - 日本-自动
