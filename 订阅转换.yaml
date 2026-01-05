@@ -125,9 +125,9 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
-  gemini_ip:
-    url: https://raw.githubusercontent.com/qihaogithub/Proxy-rules/refs/heads/main/ruleset/gemini.yaml
-    path: ./ruleset/gemini.yaml
+  AIGC_ip:
+    url: https://raw.githubusercontent.com/qihaogithub/Proxy-rules/refs/heads/main/ruleset/AIGC.yaml
+    path: ./ruleset/AIGC.yaml
     behavior: classical
     interval: 86400
     format: yaml
@@ -258,7 +258,7 @@ rules:
   - "RULE-SET,telegram_ip,Telegram"
   - "RULE-SET,google_domain,Google"
   - "RULE-SET,google_ip,Google"
-  - "RULE-SET,gemini_ip,AIGC"
+  - "RULE-SET,AIGC_ip,AIGC"
   - "RULE-SET,geolocation-!cn,代理"
   - "RULE-SET,cn_domain,DIRECT"
   - "RULE-SET,cn_ip,DIRECT"
