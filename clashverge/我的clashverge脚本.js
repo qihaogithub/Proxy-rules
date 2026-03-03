@@ -283,9 +283,10 @@ function main(config) {
     },
     {
       ...groupBaseOption,
+      "url": "https://www.figma.com",
       "name": "Figma",
-      "type": "select",
-      "proxies": ["节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连"],
+      "type": "url-test",
+      "tolerance": 100,
       "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/figma.svg"
     },
