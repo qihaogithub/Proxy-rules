@@ -288,7 +288,7 @@ function main(config) {
       "type": "url-test",
       "tolerance": 100,
       "include-all": true,
-      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/figma.svg"
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeDxRz1GNTBc7jqIpWpgyEdtAhrMFXiEP9sA&s"
     },
     {
       ...groupBaseOption,
