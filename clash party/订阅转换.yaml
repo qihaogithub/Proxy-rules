@@ -162,6 +162,7 @@ proxy-groups:
     name: AIGC
     type: select
     proxies:
+      - 韩国-自动
       - 新加坡-自动
       - 日本-自动
       - 美国-自动
@@ -217,6 +218,13 @@ proxy-groups:
     name: 美国-自动
     type: url-test
     interval: 300
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/KR.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    filter: (?i)韩国|Korea|KR|🇰🇷
+    name: 韩国-自动
+    type: url-test
+    interval: 300
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Global.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
@@ -229,6 +237,7 @@ proxy-groups:
       - Figma
       - 香港-自动
       - 新加坡-自动
+      - 韩国-自动
       - 日本-自动
       - 美国-自动
     name: 全球
