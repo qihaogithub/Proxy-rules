@@ -181,15 +181,12 @@ proxy-groups:
       - 新加坡-自动
       - 日本-自动
       - 美国-自动
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Figma.png
+  - icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeDxRz1GNTBc7jqIpWpgyEdtAhrMFXiEP9sA&s
     name: Figma
-    type: select
-    proxies:
-      - DIRECT
-      - 香港-自动
-      - 新加坡-自动
-      - 日本-自动
-      - 美国-自动
+    type: url-test
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|DIRECT
+    interval: 300
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/HK.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
