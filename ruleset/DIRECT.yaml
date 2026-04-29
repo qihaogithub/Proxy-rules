@@ -4,3 +4,4 @@ payload:
   # Tailscale 内网必须直连（核心规则）
   - IP-CIDR,100.64.0.0/10
   - IP-CIDR6,fd7a:115c:a1e0::/48
+  - DOMAIN-SUFFIX,figma-mirror.pages.dev
