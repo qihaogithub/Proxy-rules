@@ -5,3 +5,4 @@ payload:
   - IP-CIDR,100.64.0.0/10
   - IP-CIDR6,fd7a:115c:a1e0::/48
   - DOMAIN-SUFFIX,figma-mirror.pages.dev
+  - DOMAIN,figma-mirror.onlywnn.cn,DIRECT
