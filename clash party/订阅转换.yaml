@@ -163,11 +163,15 @@ proxy-groups:
     lazy: true
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/OpenAI.png
     name: AIGC
-    type: select
+    type: fallback
     proxies:
-      - 新加坡-自动
-      - 日本-自动
+      - 自建-自动
       - 美国-自动
+      - 日本-自动
+      - 新加坡-自动
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    lazy: true
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Telegram.png
     name: Telegram
     type: select
@@ -203,6 +207,16 @@ proxy-groups:
       - 香港-自动
       - 日本-自动
       - 美国-自动
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Server.png
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    filter: (?i)自建|美国-硅谷|rocket|VLESS|Reality
+    name: 自建-自动
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    lazy: true
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/HK.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
@@ -254,6 +268,7 @@ proxy-groups:
       - Google
       - Figma
       - Git
+      - 自建-自动
       - 香港-自动
       - 新加坡-自动
       - 日本-自动
