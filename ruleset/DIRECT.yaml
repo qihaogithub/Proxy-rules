@@ -1,9 +1,5 @@
 payload:
   - DOMAIN-SUFFIX,uinotes.com
-  - IP-CIDR,10.130.0.0/16
-  # Tailscale 内网必须直连（核心规则）
-  - IP-CIDR,100.64.0.0/10
-  - IP-CIDR6,fd7a:115c:a1e0::/48
-  - DOMAIN-SUFFIX,figma-mirror.pages.dev
-  - DOMAIN,figma-mirror.onlywnn.cn,DIRECT
-  - DOMAIN-SUFFIX,xjjj.co,DIRECT
+  - DOMAIN,api.figma.com
+  - DOMAIN-KEYWORD,youdao
+  - IP-CIDR,152.32.226.106/32
