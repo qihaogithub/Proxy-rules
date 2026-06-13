@@ -119,7 +119,14 @@ const ruleProviders = Object.keys(providerList).reduce((acc, key) => {
 // 【优化点3】分块定义路由规则 (解耦，方便增删改查)
 // ============================================================
 
-// 1. 本地应用及自定义域名规则 (优先级最高)
+// 1. 本地回环直连 (TUN/服务模式下防止本地回调被误代理)
+const loopbackRules = [
+  "DOMAIN,localhost,全局直连",
+  "IP-CIDR,127.0.0.0/8,全局直连,no-resolve",
+  "IP-CIDR6,::1/128,全局直连,no-resolve",
+];
+
+// 2. 本地应用及自定义域名规则 (优先级最高)
 const customAppRules =[
   // 开发及AI工具
   "DOMAIN-KEYWORD,docker,节点选择",
@@ -178,7 +185,7 @@ const fallbackRules =[
 ];
 
 // 组合所有规则
-const rules = [...customAppRules, ...remoteRuleSets, ...fallbackRules];
+const rules = [...loopbackRules, ...customAppRules, ...remoteRuleSets, ...fallbackRules];
 
 
 // ============================================================
