@@ -162,7 +162,6 @@ proxy-groups:
     name: AIGC
     type: select
     proxies:
-      - 韩国-自动
       - 新加坡-自动
       - 日本-自动
       - 美国-自动
@@ -182,14 +181,22 @@ proxy-groups:
       - 新加坡-自动
       - 日本-自动
       - 美国-自动
-  - icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeDxRz1GNTBc7jqIpWpgyEdtAhrMFXiEP9sA&s
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Figma.png
     name: Figma
-    type: url-test
-    include-all: true
-    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
-    interval: 300
+    type: select
     proxies:
       - DIRECT
+      - 香港-自动
+      - 新加坡-自动
+      - 日本-自动
+      - 美国-自动
+  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/GitHub.png
+    name: Git
+    type: select
+    proxies:
+      - DIRECT
+      - AIGC
+      - Google
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/HK.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
@@ -218,13 +225,6 @@ proxy-groups:
     name: 美国-自动
     type: url-test
     interval: 300
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/KR.png
-    include-all: true
-    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
-    filter: (?i)韩国|Korea|KR|🇰🇷
-    name: 韩国-自动
-    type: url-test
-    interval: 300
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Global.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
@@ -235,9 +235,9 @@ proxy-groups:
       - Telegram
       - Google
       - Figma
+      - Git
       - 香港-自动
       - 新加坡-自动
-      - 韩国-自动
       - 日本-自动
       - 美国-自动
     name: 全球
@@ -250,6 +250,15 @@ proxy-groups:
       - DIRECT
 
 rules:
+  - "PROCESS-NAME,git.exe,Git"
+  - "PROCESS-NAME,ssh.exe,Git"
+  - "PROCESS-NAME,git-remote-https.exe,Git"
+  - "DOMAIN-SUFFIX,github.com,Git"
+  - "DOMAIN-SUFFIX,githubusercontent.com,Git"
+  - "DOMAIN-SUFFIX,githubassets.com,Git"
+  - "DOMAIN-SUFFIX,github.io,Git"
+  - "DOMAIN-SUFFIX,githubapp.com,Git"
+  - "DOMAIN-SUFFIX,github.dev,Git"
   - "RULE-SET,DIRECT,DIRECT"
   - "RULE-SET,private,DIRECT"
   - "RULE-SET,BanAD,广告拦截"
