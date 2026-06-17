@@ -97,20 +97,6 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
-  BanAD:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/BanAD.list
-    path: ./ruleset/BanAD.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
-  BanProgramAD:
-    url: https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/BanProgramAD.list
-    path: ./ruleset/BanProgramAD.list
-    behavior: classical
-    interval: 86400
-    format: text
-    type: http
   DIRECT:
     url: https://raw.githubusercontent.com/qihaogithub/Proxy-rules/refs/heads/main/ruleset/DIRECT.yaml
     path: ./ruleset/DIRECT.yaml
@@ -180,6 +166,8 @@ proxy-groups:
     type: fallback
     proxies:
       - 自建-自动
+      - 代理
+      - 自动
       - 美国-自动
       - 日本-自动
       - 新加坡-自动
@@ -190,6 +178,8 @@ proxy-groups:
     name: Telegram
     type: select
     proxies:
+      - 代理
+      - 自动
       - 香港-自动
       - 新加坡-自动
       - 日本-自动
@@ -198,6 +188,8 @@ proxy-groups:
     name: Google
     type: select
     proxies:
+      - 代理
+      - 自动
       - 香港-自动
       - 新加坡-自动
       - 日本-自动
@@ -207,6 +199,8 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
+      - 代理
+      - 自动
       - 香港-自动
       - 新加坡-自动
       - 日本-自动
@@ -215,21 +209,23 @@ proxy-groups:
     name: Figma
     type: select
     proxies:
-      - DIRECT
       - 香港-自动
       - 新加坡-自动
       - 日本-自动
       - 美国-自动
+      - 代理
+      - 自动
+      - DIRECT
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/GitHub.png
     name: Git
     type: select
     proxies:
-      - DIRECT
       - 代理
       - 自动
       - 香港-自动
       - 日本-自动
       - 美国-自动
+      - DIRECT
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Server.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
@@ -320,8 +316,6 @@ rules:
   - "DOMAIN-SUFFIX,githubapp.com,Git"
   - "DOMAIN-SUFFIX,github.dev,Git"
   - "RULE-SET,private,DIRECT"
-  - "RULE-SET,BanAD,广告拦截"
-  - "RULE-SET,BanProgramAD,广告拦截"
   - "RULE-SET,REJECT,广告拦截"
   - "RULE-SET,DIRECT,DIRECT"
   - "RULE-SET,bing,AIGC"
