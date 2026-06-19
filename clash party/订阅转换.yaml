@@ -176,7 +176,7 @@ proxy-groups:
       - 新加坡-自动
       - 日本-自动
       - 美国-自动
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Figma.png
+  - icon: https://img.icons8.com/color/96/figma--v1.png
     name: Figma
     type: select
     proxies:
@@ -187,7 +187,7 @@ proxy-groups:
       - 代理
       - 自动
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/GitHub.png
+  - icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png
     name: Git
     type: select
     proxies:
@@ -197,7 +197,7 @@ proxy-groups:
       - 日本-自动
       - 美国-自动
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Server.png
+  - icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     filter: (?i)自建|美国-硅谷|rocket|VLESS|Reality
