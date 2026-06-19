@@ -97,27 +97,6 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
-  DIRECT:
-    url: https://raw.githubusercontent.com/qihaogithub/Proxy-rules/refs/heads/main/ruleset/DIRECT.yaml
-    path: ./ruleset/DIRECT.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
-  REJECT:
-    url: https://raw.githubusercontent.com/qihaogithub/Proxy-rules/refs/heads/main/ruleset/REJECT.yaml
-    path: ./ruleset/REJECT.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
-  AIGC_custom:
-    url: https://raw.githubusercontent.com/qihaogithub/Proxy-rules/refs/heads/main/ruleset/AIGC.yaml
-    path: ./ruleset/AIGC.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
   apple_domain:
     url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.yaml
     path: ./ruleset/apple_domain.yaml
@@ -132,14 +111,6 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
-  figma:
-    url: https://raw.githubusercontent.com/qihaogithub/Proxy-rules/refs/heads/main/ruleset/figma.yaml
-    path: ./ruleset/figma.yaml
-    behavior: classical
-    interval: 86400
-    format: yaml
-    type: http
-
 proxy-groups:
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png
     include-all: true
@@ -316,22 +287,55 @@ rules:
   - "DOMAIN-SUFFIX,githubapp.com,Git"
   - "DOMAIN-SUFFIX,github.dev,Git"
   - "RULE-SET,private,DIRECT"
-  - "RULE-SET,REJECT,广告拦截"
-  - "RULE-SET,DIRECT,DIRECT"
+  - "DOMAIN-SUFFIX,adobe.io,广告拦截"
+  - "DOMAIN-SUFFIX,adobestats.io,广告拦截"
+  - "DOMAIN,ic.adobe.io,广告拦截"
+  - "DOMAIN-SUFFIX,b5kbg2ggog.adobe.io,广告拦截"
+  - "DOMAIN-SUFFIX,uinotes.com,DIRECT"
+  - "DOMAIN-KEYWORD,youdao,DIRECT"
+  - "IP-CIDR,152.32.226.106/32,DIRECT,no-resolve"
   - "RULE-SET,bing,AIGC"
   - "RULE-SET,copilot,AIGC"
   - "RULE-SET,bard,AIGC"
   - "RULE-SET,openai,AIGC"
   - "RULE-SET,claude,AIGC"
+  - "DOMAIN-KEYWORD,figma,Figma"
+  - "DOMAIN-SUFFIX,figma.com,Figma"
   - "RULE-SET,apple_domain,Apple"
   - "RULE-SET,apple_ip,Apple"
-  - "RULE-SET,figma,Figma"
   - "RULE-SET,steam,代理"
   - "RULE-SET,telegram_domain,Telegram"
   - "RULE-SET,telegram_ip,Telegram"
+  - "DOMAIN,ai.google.dev,AIGC"
+  - "DOMAIN,alkalimakersuite-pa.clients6.google.com,AIGC"
+  - "DOMAIN,makersuite.google.com,AIGC"
+  - "DOMAIN-SUFFIX,bard.google.com,AIGC"
+  - "DOMAIN-SUFFIX,deepmind.com,AIGC"
+  - "DOMAIN-SUFFIX,deepmind.google,AIGC"
+  - "DOMAIN-SUFFIX,gemini.google.com,AIGC"
+  - "DOMAIN-SUFFIX,generativeai.google,AIGC"
+  - "DOMAIN-SUFFIX,generativelanguage.googleapis.com,AIGC"
+  - "DOMAIN-KEYWORD,colab,AIGC"
+  - "DOMAIN-KEYWORD,developerprofiles,AIGC"
+  - "DOMAIN-KEYWORD,generativelanguage,AIGC"
+  - "DOMAIN,play.google.com,AIGC"
+  - "DOMAIN-SUFFIX,clients6.google.com,AIGC"
+  - "DOMAIN-SUFFIX,ssl.gstatic.com,AIGC"
+  - "DOMAIN-SUFFIX,cursor.sh,AIGC"
+  - "DOMAIN-SUFFIX,antigravity-unleash.goog,AIGC"
+  - "DOMAIN-SUFFIX,open-vsx.org,AIGC"
+  - "DOMAIN-SUFFIX,lh3.googleusercontent.com,AIGC"
+  - "DOMAIN-SUFFIX,daily-cloudcode-pa.googleapis.com,AIGC"
+  - "DOMAIN-SUFFIX,play.googleapis.com,AIGC"
+  - "DOMAIN-SUFFIX,browser.events.data.microsoft.com,AIGC"
+  - "DOMAIN-SUFFIX,release-assets.githubusercontent.com,AIGC"
+  - "DOMAIN-KEYWORD,anthropic,AIGC"
+  - "DOMAIN-SUFFIX,claude.ai,AIGC"
+  - "DOMAIN,servd-anthropic-website.b-cdn.net,AIGC"
+  - "DOMAIN-SUFFIX,aistudio.google.com,AIGC"
+  - "DOMAIN-SUFFIX,console.groq.com,AIGC"
   - "RULE-SET,google_domain,Google"
   - "RULE-SET,google_ip,Google"
-  - "RULE-SET,AIGC_custom,AIGC"
   - "RULE-SET,geolocation-!cn,代理"
   - "RULE-SET,cn_domain,DIRECT"
   - "RULE-SET,cn_ip,DIRECT"
