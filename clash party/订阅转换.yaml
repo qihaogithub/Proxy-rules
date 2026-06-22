@@ -294,6 +294,7 @@ rules:
   - "DOMAIN-SUFFIX,uinotes.com,DIRECT"
   - "DOMAIN-KEYWORD,youdao,DIRECT"
   - "IP-CIDR,152.32.226.106/32,DIRECT,no-resolve"
+  - "DOMAIN-SUFFIX,xjjj.co,DIRECT"
   - "RULE-SET,bing,AIGC"
   - "RULE-SET,copilot,AIGC"
   - "RULE-SET,bard,AIGC"
