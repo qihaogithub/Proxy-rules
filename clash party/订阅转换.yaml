@@ -178,7 +178,7 @@ proxy-groups:
       - 美国-自动
   - icon: https://img.icons8.com/color/96/figma--v1.png
     name: Figma
-    type: select
+    type: fallback
     proxies:
       - 香港-自动
       - 新加坡-自动
@@ -187,6 +187,9 @@ proxy-groups:
       - 代理
       - 自动
       - DIRECT
+    url: https://www.figma.com
+    interval: 300
+    lazy: true
   - icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png
     name: Git
     type: select
@@ -294,7 +297,6 @@ rules:
   - "DOMAIN-SUFFIX,uinotes.com,DIRECT"
   - "DOMAIN-KEYWORD,youdao,DIRECT"
   - "IP-CIDR,152.32.226.106/32,DIRECT,no-resolve"
-  - "DOMAIN-SUFFIX,xjjj.co,DIRECT"
   - "RULE-SET,bing,AIGC"
   - "RULE-SET,copilot,AIGC"
   - "RULE-SET,bard,AIGC"
