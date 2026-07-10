@@ -186,7 +186,6 @@ proxy-groups:
       - 美国-自动
       - 代理
       - 自动
-      - DIRECT
     url: https://www.figma.com
     interval: 300
     lazy: true
@@ -283,6 +282,8 @@ rules:
   - "PROCESS-NAME,git.exe,Git"
   - "PROCESS-NAME,ssh.exe,Git"
   - "PROCESS-NAME,git-remote-https.exe,Git"
+  - "PROCESS-NAME,Figma.exe,Figma"
+  - "PROCESS-NAME,Figma,Figma"
   - "DOMAIN-SUFFIX,github.com,Git"
   - "DOMAIN-SUFFIX,githubusercontent.com,Git"
   - "DOMAIN-SUFFIX,githubassets.com,Git"
