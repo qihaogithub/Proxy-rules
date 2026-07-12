@@ -180,12 +180,13 @@ proxy-groups:
     name: Figma
     type: fallback
     proxies:
+      - DIRECT
+      - 代理
+      - 自动
       - 香港-自动
       - 新加坡-自动
       - 日本-自动
       - 美国-自动
-      - 代理
-      - 自动
     url: https://www.figma.com
     interval: 300
     lazy: true
