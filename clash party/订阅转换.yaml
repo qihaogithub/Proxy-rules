@@ -119,10 +119,12 @@ proxy-groups:
     type: select
     proxies:
       - 自动
+      - 自建-自动
       - 香港-自动
       - 新加坡-自动
       - 日本-自动
       - 美国-自动
+      - DIRECT
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Urltest.png
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
@@ -155,6 +157,7 @@ proxy-groups:
       - 新加坡-自动
       - 日本-自动
       - 美国-自动
+      - DIRECT
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Google.png
     name: Google
     type: select
@@ -165,6 +168,7 @@ proxy-groups:
       - 新加坡-自动
       - 日本-自动
       - 美国-自动
+      - DIRECT
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Apple.png
     name: Apple
     type: select
@@ -267,6 +271,7 @@ proxy-groups:
       - 新加坡-自动
       - 日本-自动
       - 美国-自动
+      - DIRECT
     name: 全球
     type: select
   - icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AdBlack.png
