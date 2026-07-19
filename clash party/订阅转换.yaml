@@ -305,6 +305,7 @@ rules:
   - "DOMAIN-SUFFIX,b5kbg2ggog.adobe.io,广告拦截"
   - "DOMAIN-SUFFIX,qoder.sh,DIRECT"
   - "DOMAIN-SUFFIX,uinotes.com,DIRECT"
+  - "DOMAIN-SUFFIX,xjjj.co,DIRECT"
   - "DOMAIN-KEYWORD,youdao,DIRECT"
   - "IP-CIDR,152.32.226.106/32,DIRECT,no-resolve"
   - "RULE-SET,bing,AIGC"
