@@ -308,6 +308,7 @@ rules:
   - "DOMAIN-SUFFIX,qoder.sh,DIRECT"
   - "DOMAIN-SUFFIX,uinotes.com,DIRECT"
   - "DOMAIN-SUFFIX,xjjj.co,DIRECT"
+  - "IP-CIDR,111.9.2.106/32,DIRECT,no-resolve"
   - "DOMAIN-KEYWORD,youdao,DIRECT"
   - "IP-CIDR,152.32.226.106/32,DIRECT,no-resolve"
   - "RULE-SET,bing,AIGC"
