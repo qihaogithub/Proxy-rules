@@ -156,17 +156,6 @@ proxy-groups:
       - 日本-自动
       - 美国-自动
       - DIRECT
-  - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Google.png
-    name: Google
-    type: select
-    proxies:
-      - 代理
-      - 自动
-      - 香港-自动
-      - 新加坡-自动
-      - 日本-自动
-      - 美国-自动
-      - DIRECT
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Apple.png
     name: Apple
     type: select
@@ -260,7 +249,6 @@ proxy-groups:
       - 自动
       - AIGC
       - Telegram
-      - Google
       - Apple
       - Figma
       - Git
@@ -351,12 +339,6 @@ rules:
   - "DOMAIN,servd-anthropic-website.b-cdn.net,AIGC"
   - "DOMAIN-SUFFIX,aistudio.google.com,AIGC"
   - "DOMAIN-SUFFIX,console.groq.com,AIGC"
-  - "DOMAIN-SUFFIX,update.googleapis.com,AIGC"
-  - "DOMAIN-SUFFIX,chat.openai.com,AIGC"
-  - "DOMAIN-SUFFIX,api.openai.com,AIGC"
-  - "DOMAIN-SUFFIX,auth0.openai.com,AIGC"
-  - "DOMAIN-SUFFIX,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,AIGC"
-  - "DOMAIN-KEYWORD,openai,AIGC"
   - "RULE-SET,google_domain,AIGC"
   - "RULE-SET,google_ip,AIGC"
   - "RULE-SET,geolocation-!cn,代理"
