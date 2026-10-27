@@ -111,6 +111,8 @@ rule-providers:
     interval: 86400
     format: yaml
     type: http
+hosts:
+  'git.xjjj.co': 121.199.40.19
 proxy-groups:
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png
     include-all: true
