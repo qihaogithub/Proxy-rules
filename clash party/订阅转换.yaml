@@ -113,6 +113,9 @@ rule-providers:
     type: http
 hosts:
   'git.xjjj.co': 121.199.40.19
+dns:
+  enable: true
+  use-hosts: true
 proxy-groups:
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png
     include-all: true
