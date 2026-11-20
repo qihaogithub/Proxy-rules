@@ -116,6 +116,8 @@ hosts:
 dns:
   enable: true
   use-hosts: true
+tun:
+  dns-mode: native
 proxy-groups:
   - icon: https://testingcf.jsdelivr.net/gh/Orz-3/mini@master/Color/Static.png
     include-all: true
